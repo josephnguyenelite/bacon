@@ -14,10 +14,30 @@ h1 {
   margin: 0 0;
 }
 
+.blinking {
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: darkred;    }
+    49%{    color: darkred; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: darkred;    }
+
+}
+
 p {
   color: brown;
   font-size: 600%;
   margin: 1.5vh 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  animation: type 4s steps(60, end);
+}
+
+@keyframes type{
+  from { width: 0; }
 }
 
 img {
