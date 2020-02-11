@@ -1,0 +1,38 @@
+body {
+  background-color: #f8b195;
+}
+
+div {
+  margin: auto;
+  text-align: center;
+  width: 100%
+}
+
+h1 {
+  color: darkred;
+  font-size: 1000%;
+  margin: 0 0;
+}
+
+p {
+  color: brown;
+  font-size: 600%;
+  margin: 1.5vh 0;
+}
+
+img {
+  margin: auto;
+}
+
+.baconCircular {
+  margin: auto;
+  padding: 0 0;
+  width: 15%;
+}
+
+hr {
+    border-width: 1vh;
+    border-color: brown;
+    border-style: dotted none none none;
+    width: 3%;
+}
