@@ -1,3 +1,4 @@
+/*---------------------------------TAG STYLES--------------------------------*/
 body {
   background-color: #f8b195;
 }
@@ -14,17 +15,18 @@ h1 {
   margin: 0 0;
 }
 
-.blinking {
-    animation:blinkingText 1.2s infinite;
+hr {
+  border-width: 1vh;
+  border-color: brown;
+  border-style: dotted none none none;
+  width: 3%;
 }
-@keyframes blinkingText{
-    0%{     color: darkred;    }
-    49%{    color: darkred; }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: darkred;    }
 
+img {
+  margin: auto;
+  padding: 1%;
 }
+
 
 p {
   color: brown;
@@ -35,24 +37,95 @@ p {
   width: 100%;
   animation: type 4s steps(60, end);
 }
-
-@keyframes type{
-  from { width: 0; }
-}
-
-img {
-  margin: auto;
+/*-------------------"type" animation keyframe-------------------------------*/
+@keyframes type {
+  from {
+    width: 0;
+  }
 }
 
 .baconCircular {
   margin: auto;
   padding: 0 0;
-  width: 15%;
+  width: 100%;
 }
 
-hr {
-    border-width: 1vh;
-    border-color: brown;
-    border-style: dotted none none none;
-    width: 3%;
+/*---------------------------------Blinking H1--------------------------------*/
+.blinking {
+  animation: blinkingText 1.2s infinite;
+}
+
+@keyframes blinkingText {
+  0% {
+    color: darkred;
+  }
+
+  49% {
+    color: darkred;
+  }
+
+  60% {
+    color: transparent;
+  }
+
+  99% {
+    color: transparent;
+  }
+
+  100% {
+    color: darkred;
+  }
+}
+
+/*--------------------CSS FOR BLINKING BACKGROUND----------------------------*/
+.goodBlink {
+  width: 13%;
+  -webkit-animation: goodBlink 1s infinite;
+  /* Safari 4+ */
+  -moz-animation: goodBlink 1s infinite;
+  /* Fx 5+ */
+  -o-animation: goodBlink 1s infinite;
+  /* Opera 12+ */
+  animation: goodBlink 1s infinite;
+  /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes goodBlink {
+  0%, 49% {
+    background-color: rgb(117, 209, 63);
+    border: 3px solid #f8b195;
+    border-radius: 50%;
+  }
+
+  50%, 100% {
+    background-color: #f8b195;
+    border: 3px solid rgb(117, 209, 63);
+    border-radius: 50%;
+  }
+}
+
+.badBlink {
+  width: 13%;
+  -webkit-animation: badBlink 1s infinite;
+  /* Safari 4+ */
+  -moz-animation: badBlink 1s infinite;
+  /* Fx 5+ */
+  -o-animation: badBlink 1s infinite;
+  /* Opera 12+ */
+  animation: badBlink 1s infinite;
+  /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes badBlink {
+  0%, 49% {
+    background-color: red;
+    border: 3px solid #f8b195;
+    border-radius: 50%;
+  }
+
+  50%, 100% {
+    background-color: #f8b195;
+    border: 3px solid red;
+    border-radius: 50%;
+  }
 }
